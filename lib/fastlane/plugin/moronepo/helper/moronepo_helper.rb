@@ -1,4 +1,7 @@
 require 'fastlane_core/ui/ui'
+require 'fastlane/action'
+
+require_relative 'moronepo_configuration'
 
 module Fastlane
   UI = FastlaneCore::UI unless Fastlane.const_defined?("UI")
@@ -14,6 +17,24 @@ module Fastlane
 
       def self.dart_executable
         "flutter"
+      end
+
+      def self.moronepo_executable
+        "#{dart_executable} pub global run moronepo"
+      end
+
+      def self.run_moronepo(configuration, other_action)
+        cmd = []
+        cmd << moronepo_executable
+
+        working_directory = configuration.working_directory
+        if working_directory
+          cmd << "--working-directory"
+          cmd << working_directory
+        end
+
+        cmd << configuration.command
+        Actions.sh(cmd.join(' '))
       end
     end
   end
