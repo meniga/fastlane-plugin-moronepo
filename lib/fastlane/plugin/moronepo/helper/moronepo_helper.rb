@@ -23,7 +23,7 @@ module Fastlane
         "#{dart_executable} pub global run moronepo"
       end
 
-      def self.run_moronepo(configuration, other_action)
+      def self.run_moronepo(configuration)
         cmd = []
         cmd << moronepo_executable
 
@@ -31,6 +31,18 @@ module Fastlane
         if working_directory
           cmd << "--working-directory"
           cmd << working_directory
+        end
+
+        project = configuration.project
+        if project
+          cmd << "--project"
+          cmd << project
+        end
+
+        filter = configuration.filter
+        if filter
+          cmd << "--filter"
+          cmd << filter.join(',')
         end
 
         cmd << configuration.command

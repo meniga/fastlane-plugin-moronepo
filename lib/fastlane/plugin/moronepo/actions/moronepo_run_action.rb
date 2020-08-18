@@ -4,10 +4,10 @@ require_relative '../helper/options_helper'
 
 module Fastlane
   module Actions
-    class MoronepoUpdateFlutterSdkAction < Action
+    class MoronepoRunAction < Action
       def self.run(params)
         configuration = MoronepoConfiguration.new(params.values)
-        configuration.command = "update-flutter-sdk"
+        configuration.command = "run -- #{params[:arguments]}"
         Helper::MoronepoHelper.run_moronepo(configuration)
       end
 
@@ -20,7 +20,16 @@ module Fastlane
       end
 
       def self.available_options
-        [Helper::OptionsHelper.working_directory]
+        [
+          Helper::OptionsHelper.working_directory,
+          Helper::OptionsHelper.project,
+          Helper::OptionsHelper.filter,
+          FastlaneCore::ConfigItem.new(key: :arguments,
+            env_name: "FL_MORONEPO_RUN_ARGUMENTS",
+            description: "Run command arguments",
+            optional: false,
+            type: String)
+        ]
       end
 
       def self.is_supported?(platform)

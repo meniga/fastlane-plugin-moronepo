@@ -7,6 +7,10 @@ module ActionRunner
     run_action("moronepo_update_flutter_sdk", string_params)
   end
 
+  def self.moronepo_run(string_params)
+    run_action("moronepo_run", string_params)
+  end
+
   def self.run_action(name, string_params)
     Fastlane::FastFile.new.parse("
       lane :test do
