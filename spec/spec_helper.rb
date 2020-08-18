@@ -9,7 +9,8 @@ SimpleCov.start
 module SpecHelper
 end
 
-require 'fastlane' # to import the Action super class
-require 'fastlane/plugin/moronepo' # import the actual plugin
+require 'fastlane'
+require 'fastlane/plugin/moronepo'
+require 'action_runner.rb'
 
-Fastlane.load_actions # load other actions (in case your plugin calls other actions or shared values)
+Fastlane.load_actions

@@ -11,6 +11,10 @@ module Fastlane
       def self.show_message
         UI.message("Hello from the moronepo plugin helper!")
       end
+
+      def self.dart_executable
+        "flutter"
+      end
     end
   end
 end
