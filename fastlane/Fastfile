@@ -1,5 +1,5 @@
 lane :test do
-working_directory = "example_projects"
+  working_directory = "example_projects"
   moronepo_activate
   moronepo_update_flutter_sdk(
     working_directory: working_directory

@@ -8,13 +8,6 @@ module Fastlane
 
   module Helper
     class MoronepoHelper
-      # class methods that you define here become available in your action
-      # as `Helper::MoronepoHelper.your_method`
-      #
-      def self.show_message
-        UI.message("Hello from the moronepo plugin helper!")
-      end
-
       def self.dart_executable
         "flutter"
       end
