@@ -10,3 +10,8 @@ fastlane/report.xml
 coverage
 test-results
 vendor/bundle
+
+## Dart connected
+**/.dart_tool
+**/.packages
+**/build
