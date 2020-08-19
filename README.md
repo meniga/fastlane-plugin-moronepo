@@ -15,8 +15,7 @@ fastlane add_plugin moronepo
 ## About moronepo
 
 Run dart pub moronepo with fastlane!
-
-Moronepo is a tool to simplify development in a dart multi-package repository.
+[Moronepo](https://github.com/meniga/moronepo) is a tool to simplify development in a dart multi-package repository.
 ## Example
 
 Check out the [example `Fastfile`](fastlane/Fastfile) to see how to use this plugin. Try it by cloning the repo, running `fastlane install_plugins` and `bundle exec fastlane test`.
