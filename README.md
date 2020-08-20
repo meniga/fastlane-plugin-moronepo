@@ -1,6 +1,8 @@
 # moronepo plugin
 
 [![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/master/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-moronepo)
+[![Build Status](https://travis-ci.org/meniga/fastlane-plugin-moronepo.svg?branch=master)](https://travis-ci.org/meniga/fastlane-plugin-moronepo)
+[![codecov](https://codecov.io/gh/meniga/fastlane-plugin-moronepo/branch/master/graph/badge.svg)](https://codecov.io/gh/meniga/fastlane-plugin-moronepo)
 
 ## Getting Started
 
@@ -13,14 +15,11 @@ fastlane add_plugin moronepo
 ## About moronepo
 
 Run dart pub moronepo with fastlane!
-
-**Note to author:** Add a more detailed description about this plugin here. If your plugin contains multiple actions, make sure to mention them here.
-
+[Moronepo](https://github.com/meniga/moronepo) is a tool to simplify development in a dart multi-package repository.
 ## Example
 
 Check out the [example `Fastfile`](fastlane/Fastfile) to see how to use this plugin. Try it by cloning the repo, running `fastlane install_plugins` and `bundle exec fastlane test`.
 
-**Note to author:** Please set up a sample project to make it easy for users to explore what your plugin does. Provide everything that is necessary to try out the plugin in this project (including a sample Xcode/Android project if necessary)
 
 ## Run tests for this plugin
 

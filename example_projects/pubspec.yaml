@@ -1,0 +1,3 @@
+name: root
+environment:
+  flutter: ">1.0.0"

@@ -1,3 +1,17 @@
 lane :test do
-  moronepo
+  working_directory = "example_projects"
+  moronepo_activate
+  moronepo_update_flutter_sdk(
+    working_directory: working_directory
+  )
+  moronepo_run(
+    filter: ["hasTests", "isFlutter"],
+    arguments: "flutter test",
+    working_directory: working_directory
+  )
+  moronepo_run(
+    filter: ["hasTests", "!isFlutter"],
+    arguments: "flutter pub run test",
+    working_directory: working_directory
+  )
 end
